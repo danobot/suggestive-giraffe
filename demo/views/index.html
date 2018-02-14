@@ -1,0 +1,78 @@
+
+<html>
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="../custom.css">
+</head>
+  <body>
+<style>
+span.id  {
+  font-size: 20pt;
+  font-weight: bold;
+  background-color: #ffff7b;
+}
+
+span.id-small {
+  font-weight: bold;
+}
+
+.title {
+  font-size: 48pt;
+  font-weight: 700;
+}
+
+.content {
+  font-size: 14pt;
+}
+
+
+</style>
+<div class="container">
+  <div class="mt-5">
+    <h1 class="title text-center">spontaneous-giraffe</h1>
+    <a href=""></a>
+    <p class="lead text-center">Spice up your application with a bit of humour whilst improving communication and memorability. Go wild</p>
+  </div>
+    <div class="content mt-5">
+
+      <p>This package generates identification strings like <span class="id-small">kinda-inappropriate-purple-giraffe</span> and <span class="id-small">very-suggestive-bluish-flamingo</span>. Other honorable mentions include <span class="id">{{id.[0]}}</span> and of course <span class="id">{{id.[1]}}</span>. Only a <span class="id">{{id.[2]}}</span> could think of these!</p>
+      <p>The maximum mapping space currently contains <span class="id-small">{{count}}million identifiers</span>. Use with caution, just like an <span class="id-small">extremely-cautious-pink-elephant</span> would! Uniqueness is not guaranteed. Your application should handle validations. Here are some of my favorite ids.</p>
+
+      <div class="list row mb-5 mt-4 text-center">
+        <div class="col-md-4">
+          <h2>Long <small>{{count}}M ids</small></h2>
+          {{#each long}}
+          <span class="id-small">{{this}}</span><br>
+
+          {{/each}}
+
+        </div>
+        <div class="col-md-4">
+          <h2>Medium <small>{{countMedium}} ids</small></h2>
+          {{#each medium}}
+          <span class="id-small">{{this}}</span><br>
+
+          {{/each}}
+
+        </div>
+        <div class="col-md-4">
+          <h2>Short <small>{{countShort}} ids</small></h2>
+          {{#each short}}
+          <span class="id-small">{{this}}</span><br>
+
+          {{/each}}
+
+        </div>
+      </div>
+
+      <p>They're all my favorites all {{count}}million of them! Refresh and see for yourself! Other than that, enjoy!</p>
+
+      <p><small>Don't be an <span class="id-small">utterly-misinformed-antelope</span> and <a href="https://danielha.tk">stay in the loop</a>.</small></p>
+      <a href=""></a>
+    </div>
+</div>
+  </body>
+</html>
