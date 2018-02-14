@@ -1,8 +1,9 @@
 const express = require('express')
-const app = express()
+app = express();
 var fu = require('../src/index')
+app.set('views', __dirname + '/views');
 app.set('view engine', 'hbs');
-app.engine('html', require('hbs').__express);
+app.engine('hbs', require('hbs').__express);
 app.get('/', (req, res) => {
 
   var longArray = [];
@@ -30,8 +31,10 @@ app.get('/', (req, res) => {
   Medium.push(fu.getMedium());
   Medium.push(fu.getMedium());
   Medium.push(fu.getMedium());
-  res.render('index.html', {id: longArray, countShort: fu.getShortSpace(), long:more, short: short, medium: Medium,countMedium: fu.getMediumSpace(),
+  res.render('index.hbs', {id: longArray, countShort: fu.getShortSpace(), long:more, short: short, medium: Medium,countMedium: fu.getMediumSpace(),
     count: Math.round(fu.getIdSpaceCount()/100000)/10})
 })
 
-app.listen(3000, () => console.log('Example app listening on port 3000!'))
+app.listen(3035, () => console.log('Example app listening on port 3035!'))
+
+module.exports = app;
