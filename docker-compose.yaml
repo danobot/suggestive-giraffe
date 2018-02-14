@@ -1,0 +1,25 @@
+version: '3'
+networks:
+  web:
+    external: true
+services:
+  demo:
+    image: danobot/suggestive-giraffe:rpi3
+    container_name: suggestive-giraffe-demo
+    environment:
+      - ENV=production
+    networks:
+      - web
+    expose:
+      - 3035
+    ports:
+      - 3035:3035
+#    volumes: 
+ #     - ./:/app
+    labels:
+      - "traefik.backend=suggestive-giraffe-demo"
+      - "traefik.docker.network=web"
+      - "traefik.frontend.rule=Host:giraffe.danielha.tk"
+      - "traefik.enable=true"
+      - "traefik.port=3000"
+      - "traefik.default.protocol=http"
