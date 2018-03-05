@@ -9,40 +9,81 @@
 </head>
   <body>
 <style>
+.title {
+  font-size: 150%;
+  font-weight: 700;
+}
+.btn {
+  font-size: 100%;
+}
 span.id  {
-  font-size: 20pt;
+  font-size: 120%;
   font-weight: bold;
   background-color: #ffff7b;
 }
-
+.lead {
+  font-size: 120%;
+}
 span.id-small {
   font-weight: bold;
 }
 
-.title {
-  font-size: 48pt;
-  font-weight: 700;
+h1 {
+  font-size: 120%;
 }
-
+h2 {
+  font-size: 140%;
+}
 .content {
-  font-size: 14pt;
+  /* font-size: 14pt; */
+}
+/* xs < 768 */
+@media screen and (max-width: 767px) {
+    body {
+        font-size: 3em;
+    }
+    h2 {
+      padding-top: 6rem;
+
+    }
 }
 
+/* sm */
+@media screen and (min-width: 768px) {
+    body {
+        font-size: 3em;
+    }
+}
+
+/* md */
+@media screen and (min-width: 992px) {
+    body {
+        font-size: 1.2em;
+    }
+}
+
+/* lg */
+@media screen and (min-width: 1200px) {
+    body {
+        font-size: 1.3em;
+    }
+}
 
 </style>
-<div class="container">
+<div class="container-fluid">
   <div class="mt-5">
     <h1 class="title text-center">suggestive-giraffe</h1>
-    <a href=""></a>
-    <p class="lead text-center">Spice up your application with a bit of humour whilst improving communication and memorability. Go wild! (unlike a <b>terribly-gentle-tiger</b>)</p>
+    <p class="lead text-center">Spice up your application with a bit of humour whilst improving communication and memorability. Go wild!</p>
+    <a href="https://github.com/danobot/suggestive-giraffe" class="btn btn-default text-center">Github</a>
+    <a href="https://github.com/danobot/suggestive-giraffe/issues/new" class="btn btn-default text-center">Submit Issue</a>
   </div>
     <div class="content mt-5">
 
-      <p>This package generates identification strings like <span class="id-small">kinda-inappropriate-purple-giraffe</span> and <span class="id-small">very-suggestive-bluish-flamingo</span>. Other honorable mentions include <span class="id">{{id.[0]}}</span> and of course <span class="id">{{id.[1]}}</span>. Only a <span class="id">{{id.[2]}}</span> could think of these!</p>
-      <p>The maximum mapping space currently contains <span class="id-small">{{count}}million identifiers</span>. Use with caution, just like an <span class="id-small">extremely-cautious-pink-elephant</span> would! Uniqueness is not guaranteed. Your application should handle validations. Here are some of my favorite ids.</p>
+      <p>This package generates <i>utterly ridiculous</i> identification strings like <span class="id-small">kinda-inappropriate-panda</span> and <span class="id-small">suggestive-giraffe</span>. Other honorable mentions include <span class="id">{{id.[0]}}</span> and of course <span class="id">{{id.[1]}}</span>. Only a <span class="id">{{id.[2]}}</span> could think of these!</p>
+      <p>The maximum mapping space currently contains <span class="id-small">{{count}}million identifiers</span>. Use with caution, just like an <span class="id-small">extremely-cautious-pink-elephant</span> would! Uniqueness is not guaranteed. Your application should handle validations. Here are some random ones:</p>
 
       <div class="list row mb-5 mt-4 text-center">
-        <div class="col-md-4">
+        <div class="col-lg">
           <h2>Long <small>{{count}}M ids</small></h2>
           {{#each long}}
           <span class="id-small">{{this}}</span><br>
@@ -50,7 +91,7 @@ span.id-small {
           {{/each}}
 
         </div>
-        <div class="col-md-4">
+        <div class="col-lg">
           <h2>Medium <small>{{countMedium}} ids</small></h2>
           {{#each medium}}
           <span class="id-small">{{this}}</span><br>
@@ -58,7 +99,7 @@ span.id-small {
           {{/each}}
 
         </div>
-        <div class="col-md-4">
+        <div class="col-lg">
           <h2>Short <small>{{countShort}} ids</small></h2>
           {{#each short}}
           <span class="id-small">{{this}}</span><br>
@@ -68,10 +109,9 @@ span.id-small {
         </div>
       </div>
 
-      <p>They're all my favorites all {{count}}million of them! Refresh and see for yourself! Other than that, enjoy!</p>
+      <p>Refresh and enjoy!</p>
 
       <p><small>Don't be an <span class="id-small">utterly-misinformed-antelope</span> and <a href="https://danielha.tk">stay in the loop</a>.</small></p>
-      <a href=""></a>
     </div>
 </div>
   </body>

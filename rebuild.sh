@@ -1,9 +1,9 @@
 git pull
 docker build -t danobot/suggestive-giraffe:rpi3 .
-docker push danobot/suggestive-giraffe:rpi3
-echo "$(date)    Built image on Raspberry Pi" >> builds.log
-git commit ./builds.log -m "Appended build record to build log"
-git push
+#docker push danobot/suggestive-giraffe:rpi3
+#echo "$(date)    Built image on Raspberry Pi" >> builds.log
+#git commit ./builds.log -m "Appended build record to build log"
+#git push
 
 cd ~/dockerfiles/master/
 docker stop suggestive-giraffe-demo
