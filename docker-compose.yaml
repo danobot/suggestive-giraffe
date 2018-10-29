@@ -1,6 +1,6 @@
 version: '3'
 networks:
-  web:
+  public:
     external: true
 services:
   demo:
@@ -9,7 +9,7 @@ services:
     environment:
       - ENV=production
     networks:
-      - web
+      - public
     expose:
       - 3035
     ports:
@@ -18,7 +18,7 @@ services:
  #     - ./:/app
     labels:
       - "traefik.backend=suggestive-giraffe-demo"
-      - "traefik.docker.network=web"
+      - "traefik.docker.network=public"
       - "traefik.frontend.rule=Host:giraffe.danielha.tk"
       - "traefik.enable=true"
       - "traefik.port=3000"
